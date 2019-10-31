@@ -1,17 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app m-0">
+    <div class="">
+      <NavBar></NavBar>
+      <div class="container">
+        <WordCloud class="m-0" :member="member"></WordCloud>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WordCloud from './components/WordCloud.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    WordCloud,
+    NavBar
+  },
+  computed: {
+    member: function () {
+      return this.$store.state.member
+    }
   }
 }
 </script>
