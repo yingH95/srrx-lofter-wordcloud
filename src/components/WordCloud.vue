@@ -16,11 +16,12 @@
             height: 90%"
     ></VueWordCloud>
     <div v-if="viewMode==='列表'">
+        <p class="text-center m-2" style="color: gray">词条数据更新于2019.10.30</p>
         <table class="table table-striped table-bordered">
             <thead class="table thead-info">
                 <tr>
                     <th>排名</th>
-                    <th>Tag名称</th>
+                    <th>词条名称</th>
                     <th>频率</th>
                 </tr>
             </thead>
