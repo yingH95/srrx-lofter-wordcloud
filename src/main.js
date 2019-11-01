@@ -21,7 +21,7 @@ Vue.use(VueAnalytics, {
 const store = new Vuex.Store({
   state: {
     member: '阿云嘎',
-    viewMode: 'cloud'
+    viewMode: '词云'
   },
   mutations: {
     changeMember (state, member) {
