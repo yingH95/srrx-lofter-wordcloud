@@ -1,14 +1,36 @@
 <template>
 <div>
     <VueWordCloud
+            v-if="viewMode==='词云'"
             :words="memberTags"
             :color="colorWeight"
             :font-size-ratio="6"
             :spacing="0.25"
             :animation-duration="2500"
             font-family="Arial"
-            style="position: fixed;width: 80%;height: 90%"
+            style="position: fixed;
+            left: 50%;
+            top: 53%;
+            transform: translate(-50%, -50%);
+            width: 95%;
+            height: 95%"
     ></VueWordCloud>
+    <div v-if="viewMode==='列表'">
+        <table class="table table-striped table-bordered">
+            <thead class="table thead-info">
+                <tr>
+                    <th>Tag名称</th>
+                    <th>频率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="tag in memberTags" :key="tag[0]">
+                    <td>{{tag[0]}}</td>
+                    <td>{{tag[1]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 </template>
 
@@ -58,6 +80,7 @@
     name: "WordCloud",
     data: function () {
       return {
+        listFields: ['Tag名称', '频率'],
         memberMaps: [
           { mem: '阿云嘎', tags: aygTags },
           { mem: '郑云龙', tags: zylTags },
@@ -107,6 +130,9 @@
           return x['mem'] === this.member
         });
         return tags[0]['tags'].slice(0, 101);
+      },
+      viewMode: function () {
+        return this.$store.state.viewMode
       }
     },
     methods: {
@@ -119,5 +145,8 @@
 </script>
 
 <style scoped>
-
+.thead-info {
+    background-color: slategrey;
+    color: white;
+}
 </style>

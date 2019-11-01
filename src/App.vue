@@ -2,8 +2,8 @@
   <div id="app m-0">
     <div class="">
       <NavBar></NavBar>
-      <div class="container">
-        <WordCloud class="m-0" :member="member"></WordCloud>
+      <div class="container p-2">
+        <WordCloud :member="member"></WordCloud>
       </div>
     </div>
   </div>

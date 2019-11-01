@@ -5,18 +5,30 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vuex from 'vuex'
+import VueAnalytics from 'vue-analytics'
 
 Vue.use(Vuex);
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
+Vue.use(VueAnalytics, {
+  id: 'UA-150354610-2',
+  autoTracking: {
+    screenview: true
+  },
+  trackEvent: true
+});
 
 const store = new Vuex.Store({
   state: {
-    member: '阿云嘎'
+    member: '阿云嘎',
+    viewMode: 'cloud'
   },
   mutations: {
     changeMember (state, member) {
       state.member = member
+    },
+    changeMode (state, mode) {
+      state.viewMode = mode
     }
   }
 });
