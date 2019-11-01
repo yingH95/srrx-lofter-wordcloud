@@ -1,6 +1,6 @@
 <template>
   <div id="app m-0">
-    <div class="">
+    <div>
       <NavBar></NavBar>
       <div class="container p-2">
         <WordCloud :member="member"></WordCloud>

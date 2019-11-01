@@ -10,21 +10,23 @@
             font-family="Arial"
             style="position: fixed;
             left: 50%;
-            top: 53%;
-            transform: translate(-50%, -50%);
+            top: 60%;
+            transform: translate(-50%, -60%);
             width: 95%;
-            height: 95%"
+            height: 90%"
     ></VueWordCloud>
     <div v-if="viewMode==='列表'">
         <table class="table table-striped table-bordered">
             <thead class="table thead-info">
                 <tr>
+                    <th>排名</th>
                     <th>Tag名称</th>
                     <th>频率</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="tag in memberTags" :key="tag[0]">
+                <tr v-for="(tag, index) in memberTags" :key="tag[0]">
+                    <td>{{index + 1}}</td>
                     <td>{{tag[0]}}</td>
                     <td>{{tag[1]}}</td>
                 </tr>
