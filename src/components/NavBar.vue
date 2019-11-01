@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-navbar toggleable="md" type="dark" variant="info" style="z-index: 1">
-            <b-navbar-brand href="#">声入人心 Lofter词云 <small>制作by驼驼</small></b-navbar-brand>
+            <b-navbar-brand href="#" style="font-size: medium">声入人心 Lofter词云 <small style="font-size: x-small">制作: 驼驼</small></b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
                 <!-- Right aligned nav items -->

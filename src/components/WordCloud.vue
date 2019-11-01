@@ -10,8 +10,8 @@
             font-family="Arial"
             style="position: fixed;
             left: 50%;
-            top: 60%;
-            transform: translate(-50%, -60%);
+            top: 53%;
+            transform: translate(-50%, -50%);
             width: 95%;
             height: 90%"
     ></VueWordCloud>
