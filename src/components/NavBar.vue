@@ -30,7 +30,7 @@
     data: function () {
       return {
         members,
-        member: "阿云嘎",
+        member: "声入人心",
         viewMode: "词云"
       }
     },

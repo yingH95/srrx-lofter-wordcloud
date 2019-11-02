@@ -75,6 +75,7 @@
   import cyTags from '../assets/蔡尧_tags'
   import wkTags from '../assets/王凯_tags'
   import ljlTags from '../assets/廖佳琳_tags'
+  import srrxTags from '../assets/声入人心_tags'
 
   export default {
     components: {
@@ -85,6 +86,7 @@
       return {
         listFields: ['Tag名称', '频率'],
         memberMaps: [
+          { mem: '声入人心', tags: srrxTags },
           { mem: '阿云嘎', tags: aygTags },
           { mem: '郑云龙', tags: zylTags },
           { mem: '仝卓', tags: tzTags },
